@@ -19,4 +19,8 @@ class viewModel: ObservableObject {
     func deleteTimers(at offsets: IndexSet) {
           timers.remove(atOffsets: offsets)
       }
+    
+    func deleteTimerbyButton(id: UUID) {
+        timers.removeAll{$0.id == id}
+    }
 }

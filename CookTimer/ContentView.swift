@@ -19,12 +19,13 @@ struct ContentView: View {
             if orientationObserver.orientation.isPortrait {
                 List {
                     ForEach(vm.timers) { timer in
-                        TimerView(timerChildVm: timer)
+                        TimerView(timerChildVm: timer, timerVm: vm)
                     }
                     .onDelete { indexSet in
                         vm.deleteTimers(at: indexSet)
                     }
                 }
+                .listStyle(.plain)
                 .navigationTitle("CookTimer")
                 .toolbar {
                     Button(action: {
@@ -41,9 +42,8 @@ struct ContentView: View {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(vm.timers) { timer in
-                            TimerView(timerChildVm: timer)
+                            TimerView(timerChildVm: timer, timerVm: vm)
                                 .frame(width: 250, height: 250)
-                                .background(Color.pink.opacity(0.3))
                         }
                     }
                 }

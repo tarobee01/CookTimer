@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TimerView: View {
     @ObservedObject var timerChildVm: TimerChildViewModel
+    @ObservedObject var timerVm: viewModel
+    
     private let eventTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -54,6 +56,10 @@ struct TimerView: View {
             }
             .padding()
         }
+        .padding()
+                .background(Color(UIColor.systemBackground))
+                .cornerRadius(20)
+                .shadow(radius: 5)
         .onReceive(eventTimer, perform: { _ in
             timerChildVm.upDate()
         })
@@ -61,5 +67,5 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView(timerChildVm: TimerChildViewModel(timer: TimerModel(lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0)))
+    TimerView(timerChildVm: TimerChildViewModel(timer: TimerModel(lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0)), timerVm: viewModel())
 }
