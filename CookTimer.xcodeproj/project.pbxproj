@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D96AF2962B7DCA1E008D0D95 /* CookTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2952B7DCA1E008D0D95 /* CookTimerApp.swift */; };
+		D96AF2982B7DCA1E008D0D95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2972B7DCA1E008D0D95 /* ContentView.swift */; };
+		D96AF29A2B7DCA1F008D0D95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96AF2992B7DCA1F008D0D95 /* Assets.xcassets */; };
+		D96AF29D2B7DCA1F008D0D95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96AF29C2B7DCA1F008D0D95 /* Preview Assets.xcassets */; };
+		D96AF2A72B7DCA1F008D0D95 /* CookTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2A62B7DCA1F008D0D95 /* CookTimerTests.swift */; };
+		D96AF2B12B7DCA1F008D0D95 /* CookTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2B02B7DCA1F008D0D95 /* CookTimerUITests.swift */; };
+		D96AF2B32B7DCA1F008D0D95 /* CookTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2B22B7DCA1F008D0D95 /* CookTimerUITestsLaunchTests.swift */; };
+		D96AF2C02B7DCA4D008D0D95 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2BF2B7DCA4D008D0D95 /* TimerViewModel.swift */; };
+		D96AF2C22B7DCA60008D0D95 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2C12B7DCA60008D0D95 /* TimerModel.swift */; };
+		D9FB5FA62B7DE48C008C43FE /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB5FA52B7DE48C008C43FE /* TimerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D96AF2A32B7DCA1F008D0D95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D96AF28A2B7DCA1D008D0D95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D96AF2912B7DCA1E008D0D95;
+			remoteInfo = CookTimer;
+		};
+		D96AF2AD2B7DCA1F008D0D95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D96AF28A2B7DCA1D008D0D95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D96AF2912B7DCA1E008D0D95;
+			remoteInfo = CookTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D96AF2922B7DCA1E008D0D95 /* CookTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96AF2952B7DCA1E008D0D95 /* CookTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimerApp.swift; sourceTree = "<group>"; };
+		D96AF2972B7DCA1E008D0D95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D96AF2992B7DCA1F008D0D95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D96AF29C2B7DCA1F008D0D95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D96AF2A22B7DCA1F008D0D95 /* CookTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96AF2A62B7DCA1F008D0D95 /* CookTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimerTests.swift; sourceTree = "<group>"; };
+		D96AF2AC2B7DCA1F008D0D95 /* CookTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96AF2B02B7DCA1F008D0D95 /* CookTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimerUITests.swift; sourceTree = "<group>"; };
+		D96AF2B22B7DCA1F008D0D95 /* CookTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D96AF2BF2B7DCA4D008D0D95 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		D96AF2C12B7DCA60008D0D95 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		D9FB5FA52B7DE48C008C43FE /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D96AF28F2B7DCA1E008D0D95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AF29F2B7DCA1F008D0D95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AF2A92B7DCA1F008D0D95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D96AF2892B7DCA1D008D0D95 = {
+			isa = PBXGroup;
+			children = (
+				D96AF2942B7DCA1E008D0D95 /* CookTimer */,
+				D96AF2A52B7DCA1F008D0D95 /* CookTimerTests */,
+				D96AF2AF2B7DCA1F008D0D95 /* CookTimerUITests */,
+				D96AF2932B7DCA1E008D0D95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D96AF2932B7DCA1E008D0D95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D96AF2922B7DCA1E008D0D95 /* CookTimer.app */,
+				D96AF2A22B7DCA1F008D0D95 /* CookTimerTests.xctest */,
+				D96AF2AC2B7DCA1F008D0D95 /* CookTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D96AF2942B7DCA1E008D0D95 /* CookTimer */ = {
+			isa = PBXGroup;
+			children = (
+				D96AF2952B7DCA1E008D0D95 /* CookTimerApp.swift */,
+				D96AF2972B7DCA1E008D0D95 /* ContentView.swift */,
+				D9FB5FA52B7DE48C008C43FE /* TimerView.swift */,
+				D96AF2BF2B7DCA4D008D0D95 /* TimerViewModel.swift */,
+				D96AF2C12B7DCA60008D0D95 /* TimerModel.swift */,
+				D96AF2992B7DCA1F008D0D95 /* Assets.xcassets */,
+				D96AF29B2B7DCA1F008D0D95 /* Preview Content */,
+			);
+			path = CookTimer;
+			sourceTree = "<group>";
+		};
+		D96AF29B2B7DCA1F008D0D95 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D96AF29C2B7DCA1F008D0D95 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D96AF2A52B7DCA1F008D0D95 /* CookTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D96AF2A62B7DCA1F008D0D95 /* CookTimerTests.swift */,
+			);
+			path = CookTimerTests;
+			sourceTree = "<group>";
+		};
+		D96AF2AF2B7DCA1F008D0D95 /* CookTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D96AF2B02B7DCA1F008D0D95 /* CookTimerUITests.swift */,
+				D96AF2B22B7DCA1F008D0D95 /* CookTimerUITestsLaunchTests.swift */,
+			);
+			path = CookTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D96AF2912B7DCA1E008D0D95 /* CookTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D96AF2B62B7DCA1F008D0D95 /* Build configuration list for PBXNativeTarget "CookTimer" */;
+			buildPhases = (
+				D96AF28E2B7DCA1E008D0D95 /* Sources */,
+				D96AF28F2B7DCA1E008D0D95 /* Frameworks */,
+				D96AF2902B7DCA1E008D0D95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookTimer;
+			productName = CookTimer;
+			productReference = D96AF2922B7DCA1E008D0D95 /* CookTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D96AF2A12B7DCA1F008D0D95 /* CookTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D96AF2B92B7DCA1F008D0D95 /* Build configuration list for PBXNativeTarget "CookTimerTests" */;
+			buildPhases = (
+				D96AF29E2B7DCA1F008D0D95 /* Sources */,
+				D96AF29F2B7DCA1F008D0D95 /* Frameworks */,
+				D96AF2A02B7DCA1F008D0D95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D96AF2A42B7DCA1F008D0D95 /* PBXTargetDependency */,
+			);
+			name = CookTimerTests;
+			productName = CookTimerTests;
+			productReference = D96AF2A22B7DCA1F008D0D95 /* CookTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D96AF2AB2B7DCA1F008D0D95 /* CookTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D96AF2BC2B7DCA1F008D0D95 /* Build configuration list for PBXNativeTarget "CookTimerUITests" */;
+			buildPhases = (
+				D96AF2A82B7DCA1F008D0D95 /* Sources */,
+				D96AF2A92B7DCA1F008D0D95 /* Frameworks */,
+				D96AF2AA2B7DCA1F008D0D95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D96AF2AE2B7DCA1F008D0D95 /* PBXTargetDependency */,
+			);
+			name = CookTimerUITests;
+			productName = CookTimerUITests;
+			productReference = D96AF2AC2B7DCA1F008D0D95 /* CookTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D96AF28A2B7DCA1D008D0D95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D96AF2912B7DCA1E008D0D95 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					D96AF2A12B7DCA1F008D0D95 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D96AF2912B7DCA1E008D0D95;
+					};
+					D96AF2AB2B7DCA1F008D0D95 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D96AF2912B7DCA1E008D0D95;
+					};
+				};
+			};
+			buildConfigurationList = D96AF28D2B7DCA1D008D0D95 /* Build configuration list for PBXProject "CookTimer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D96AF2892B7DCA1D008D0D95;
+			productRefGroup = D96AF2932B7DCA1E008D0D95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D96AF2912B7DCA1E008D0D95 /* CookTimer */,
+				D96AF2A12B7DCA1F008D0D95 /* CookTimerTests */,
+				D96AF2AB2B7DCA1F008D0D95 /* CookTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D96AF2902B7DCA1E008D0D95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96AF29D2B7DCA1F008D0D95 /* Preview Assets.xcassets in Resources */,
+				D96AF29A2B7DCA1F008D0D95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AF2A02B7DCA1F008D0D95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AF2AA2B7DCA1F008D0D95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D96AF28E2B7DCA1E008D0D95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9FB5FA62B7DE48C008C43FE /* TimerView.swift in Sources */,
+				D96AF2982B7DCA1E008D0D95 /* ContentView.swift in Sources */,
+				D96AF2C22B7DCA60008D0D95 /* TimerModel.swift in Sources */,
+				D96AF2C02B7DCA4D008D0D95 /* TimerViewModel.swift in Sources */,
+				D96AF2962B7DCA1E008D0D95 /* CookTimerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AF29E2B7DCA1F008D0D95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96AF2A72B7DCA1F008D0D95 /* CookTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AF2A82B7DCA1F008D0D95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96AF2B32B7DCA1F008D0D95 /* CookTimerUITestsLaunchTests.swift in Sources */,
+				D96AF2B12B7DCA1F008D0D95 /* CookTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D96AF2A42B7DCA1F008D0D95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D96AF2912B7DCA1E008D0D95 /* CookTimer */;
+			targetProxy = D96AF2A32B7DCA1F008D0D95 /* PBXContainerItemProxy */;
+		};
+		D96AF2AE2B7DCA1F008D0D95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D96AF2912B7DCA1E008D0D95 /* CookTimer */;
+			targetProxy = D96AF2AD2B7DCA1F008D0D95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D96AF2B42B7DCA1F008D0D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D96AF2B52B7DCA1F008D0D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D96AF2B72B7DCA1F008D0D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CookTimer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "take.shin0124-icloud.com.CookTimer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D96AF2B82B7DCA1F008D0D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CookTimer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "take.shin0124-icloud.com.CookTimer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D96AF2BA2B7DCA1F008D0D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "take.shin0124-icloud.com.CookTimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CookTimer";
+			};
+			name = Debug;
+		};
+		D96AF2BB2B7DCA1F008D0D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "take.shin0124-icloud.com.CookTimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CookTimer";
+			};
+			name = Release;
+		};
+		D96AF2BD2B7DCA1F008D0D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "take.shin0124-icloud.com.CookTimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CookTimer;
+			};
+			name = Debug;
+		};
+		D96AF2BE2B7DCA1F008D0D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "take.shin0124-icloud.com.CookTimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CookTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D96AF28D2B7DCA1D008D0D95 /* Build configuration list for PBXProject "CookTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96AF2B42B7DCA1F008D0D95 /* Debug */,
+				D96AF2B52B7DCA1F008D0D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D96AF2B62B7DCA1F008D0D95 /* Build configuration list for PBXNativeTarget "CookTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96AF2B72B7DCA1F008D0D95 /* Debug */,
+				D96AF2B82B7DCA1F008D0D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D96AF2B92B7DCA1F008D0D95 /* Build configuration list for PBXNativeTarget "CookTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96AF2BA2B7DCA1F008D0D95 /* Debug */,
+				D96AF2BB2B7DCA1F008D0D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D96AF2BC2B7DCA1F008D0D95 /* Build configuration list for PBXNativeTarget "CookTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96AF2BD2B7DCA1F008D0D95 /* Debug */,
+				D96AF2BE2B7DCA1F008D0D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D96AF28A2B7DCA1D008D0D95 /* Project object */;
+}
