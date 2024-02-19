@@ -8,66 +8,58 @@
 import SwiftUI
 
 struct TimerView: View {
-    let timerId: UUID
-    @ObservedObject var vm: viewModel
+    @ObservedObject var timerChildVm: TimerChildViewModel
     private let eventTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+    
     var body: some View {
-        if let timerIndex = vm.timers.firstIndex(where: { $0.id == timerId }) {
-            VStack {
-                Text("\(vm.timers[timerIndex].lefting)")
-                    .font(.largeTitle)
-                    .fontWeight(.light)
-                Slider(value: $vm.timers[timerIndex].minutes, in: 0...1000, step: 15)
-                    .onChange(of: vm.timers[timerIndex].minutes) { newValue in
-                        vm.setTimer(newValue: newValue, id: timerId)
-                    }
-                    .disabled(vm.timers[timerIndex].isActive == true)
-                HStack(spacing: 20) {  // ボタン間のスペースを設定
-                    // Start ボタン
-                    Button(action: {
-                        vm.start(id: timerId)
-                    }) {
-                        Text("Start")
-                            .fontWeight(.medium)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(vm.timers[timerIndex].isActive ? Color.gray : Color.green)  // アクティブ状態によって背景色を変更
-                            .cornerRadius(10)
-                    }
-                    .disabled(vm.timers[timerIndex].isActive)
-                    .buttonStyle(.plain)
-                    
-                    // Stop ボタン
-                    Button(action: {
-                        vm.stop(id: timerId)
-                    }) {
-                        Text("Stop")
-                            .fontWeight(.medium)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(vm.timers[timerIndex].isActive ? Color.red : Color.gray)  // アクティブ状態によって背景色を変更
-                            .cornerRadius(10)
-                    }
-                    .disabled(!vm.timers[timerIndex].isActive)
-                    .buttonStyle(.plain)
+        VStack {
+            Text("\(timerChildVm.timer.lefting)")
+                .font(.largeTitle)
+                .fontWeight(.light)
+            Slider(value: $timerChildVm.timer.minutes, in: 0...1000, step: 15)
+                .onChange(of: timerChildVm.timer.minutes) { newValue in
+                    timerChildVm.setTimer(newValue: newValue)
                 }
-                .padding()
+                .disabled(timerChildVm.timer.isActive == true)
+            HStack(spacing: 20) {  // ボタン間のスペースを設定
+                // Start ボタン
+                Button(action: {
+                    timerChildVm.start()
+                }) {
+                    Text("Start")
+                        .fontWeight(.medium)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(timerChildVm.timer.isActive ? Color.gray : Color.green)  // アクティブ状態によって背景色を変更
+                        .cornerRadius(10)
+                }
+                .disabled(timerChildVm.timer.isActive)
+                .buttonStyle(.plain)
+                
+                // Stop ボタン
+                Button(action: {
+                    timerChildVm.stop()
+                }) {
+                    Text("Stop")
+                        .fontWeight(.medium)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(timerChildVm.timer.isActive ? Color.red : Color.gray)  // アクティブ状態によって背景色を変更
+                        .cornerRadius(10)
+                }
+                .disabled(!timerChildVm.timer.isActive)
+                .buttonStyle(.plain)
             }
-            .onReceive(eventTimer, perform: { _ in
-                vm.upDate(id: timerId)
-            })
-        } else {
-            VStack {
-                Text("timer not found")
-            }
+            .padding()
         }
-        
+        .onReceive(eventTimer, perform: { _ in
+            timerChildVm.upDate()
+        })
     }
 }
 
 #Preview {
-    TimerView(timerId: UUID(), vm: viewModel())
+    TimerView(timerChildVm: TimerChildViewModel(timer: TimerModel(lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0)))
 }

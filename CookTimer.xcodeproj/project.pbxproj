@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D954ADF42B839DE300261B0A /* TimerChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954ADF32B839DE300261B0A /* TimerChildViewModel.swift */; };
 		D96AF2962B7DCA1E008D0D95 /* CookTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2952B7DCA1E008D0D95 /* CookTimerApp.swift */; };
 		D96AF2982B7DCA1E008D0D95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AF2972B7DCA1E008D0D95 /* ContentView.swift */; };
 		D96AF29A2B7DCA1F008D0D95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96AF2992B7DCA1F008D0D95 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D954ADF32B839DE300261B0A /* TimerChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerChildViewModel.swift; sourceTree = "<group>"; };
 		D96AF2922B7DCA1E008D0D95 /* CookTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96AF2952B7DCA1E008D0D95 /* CookTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimerApp.swift; sourceTree = "<group>"; };
 		D96AF2972B7DCA1E008D0D95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				D96AF2972B7DCA1E008D0D95 /* ContentView.swift */,
 				D9FB5FA52B7DE48C008C43FE /* TimerView.swift */,
 				D96AF2BF2B7DCA4D008D0D95 /* TimerViewModel.swift */,
+				D954ADF32B839DE300261B0A /* TimerChildViewModel.swift */,
 				D96AF2C12B7DCA60008D0D95 /* TimerModel.swift */,
 				D96AF2992B7DCA1F008D0D95 /* Assets.xcassets */,
 				D96AF29B2B7DCA1F008D0D95 /* Preview Content */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FB5FA62B7DE48C008C43FE /* TimerView.swift in Sources */,
+				D954ADF42B839DE300261B0A /* TimerChildViewModel.swift in Sources */,
 				D96AF2982B7DCA1E008D0D95 /* ContentView.swift in Sources */,
 				D96AF2C22B7DCA60008D0D95 /* TimerModel.swift in Sources */,
 				D96AF2C02B7DCA4D008D0D95 /* TimerViewModel.swift in Sources */,
