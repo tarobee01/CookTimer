@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct TimerModel: Identifiable {
     var timerName: String
@@ -26,4 +27,10 @@ struct TimerModel: Identifiable {
         self.minutes = minutes
         self.savedTimeRemaining = savedTimeRemaining
     }
+}
+
+struct ColorScheme: Hashable, Identifiable {
+    var id = UUID()
+    var name: String
+    var backgroundColor: Color
 }
