@@ -12,7 +12,7 @@ class viewModel: ObservableObject {
     @Published var timers: [TimerChildViewModel] = []
     
     func addTimer() {
-        let newTimer = TimerChildViewModel(timer: TimerModel(lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0))
+        let newTimer = TimerChildViewModel(timer: TimerModel(timerName: "", lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0))
         timers.append(newTimer)
     }
     

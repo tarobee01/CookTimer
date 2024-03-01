@@ -8,6 +8,7 @@
 import Foundation
 
 struct TimerModel: Identifiable {
+    var timerName: String
     var id = UUID()
     var endDate: Date?
     var lefting: String
@@ -15,7 +16,9 @@ struct TimerModel: Identifiable {
     var minutes: Double
     var savedTimeRemaining: TimeInterval
     
-    init(id: UUID = UUID(), endDate: Date? = nil, lefting: String, isActive: Bool, minutes: Double, savedTimeRemaining: TimeInterval) {
+    
+    init(timerName: String, id: UUID = UUID(), endDate: Date? = nil, lefting: String, isActive: Bool, minutes: Double, savedTimeRemaining: TimeInterval) {
+        self.timerName = timerName
         self.id = id
         self.endDate = endDate
         self.lefting = lefting

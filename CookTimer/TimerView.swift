@@ -15,6 +15,8 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
+            TextField("timerName", text: $timerChildVm.timer.timerName)
+                .font(.system(size: 16, weight: .bold))
             Text("\(timerChildVm.timer.lefting)")
                 .font(.largeTitle)
                 .fontWeight(.light)
@@ -67,5 +69,5 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView(timerChildVm: TimerChildViewModel(timer: TimerModel(lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0)), timerVm: viewModel())
+    TimerView(timerChildVm: TimerChildViewModel(timer: TimerModel(timerName: "", lefting: "0:00", isActive: false, minutes: 0, savedTimeRemaining: 0)), timerVm: viewModel())
 }
