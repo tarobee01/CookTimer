@@ -58,7 +58,7 @@ struct TimerView: View {
                 .buttonStyle(.plain)
                 .disabled(timerChildVm.timer.isActive == true)
             }
-            Slider(value: $timerChildVm.timer.minutes, in: 0...2000, step: 15)
+            Slider(value: $timerChildVm.timer.minutes, in: 0...2000, step: 10)
                 .onChange(of: timerChildVm.timer.minutes) { newValue in
                     timerChildVm.setTimer(newValue: newValue)
                 }
