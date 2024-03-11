@@ -28,14 +28,16 @@ struct ContentView: View {
                 .listStyle(.plain)
                 .navigationTitle("CookTimer")
                 .toolbar {
-                    Button(action: {
-                        vm.addTimer()
-                    }) {
-                        Image(systemName: "timer")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding()
+                    ToolbarItem {
+                        Button(action: {
+                            vm.addTimer()
+                        }) {
+                            Image(systemName: "timer")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                                .padding()
+                        }
                     }
                 }
             } else {
@@ -43,7 +45,8 @@ struct ContentView: View {
                     HStack {
                         ForEach(vm.timers) { timer in
                             TimerView(timerChildVm: timer, timerVm: vm)
-                                .frame(width: 250, height: 250)
+                                .frame(width: 230, height: 230)
+                                .padding(20)
                         }
                     }
                 }
@@ -64,17 +67,24 @@ struct ContentView: View {
     }
 }
 
+//デバイスの向きを監視するクラス
 class OrientationObserver: ObservableObject {
     @Published var orientation: UIDeviceOrientation = .portrait
 
-    init() {
-        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-        NotificationCenter.default.addObserver(self, selector: #selector(didChangeOrientation), name: UIDevice.orientationDidChangeNotification, object: nil)
-    }
+        init() {
+            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(didChangeOrientation),
+                name: UIDevice.orientationDidChangeNotification,
+                object: nil
+            )
+            didChangeOrientation() // 初期化時に現在の向きを取得
+        }
 
-    @objc private func didChangeOrientation() {
-        orientation = UIDevice.current.orientation
-    }
+        @objc private func didChangeOrientation() {
+            orientation = UIDevice.current.orientation
+        }
 }
 
 #Preview {
