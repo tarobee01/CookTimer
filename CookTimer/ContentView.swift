@@ -28,7 +28,7 @@ struct ContentView: View {
                 .listStyle(.plain)
                 .navigationTitle("CookTimer")
                 .toolbar {
-                    ToolbarItem {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button(action: {
                             vm.addTimer()
                         }) {
@@ -45,8 +45,8 @@ struct ContentView: View {
                     HStack {
                         ForEach(vm.timers) { timer in
                             TimerView(timerChildVm: timer, timerVm: vm)
-                                .frame(width: 230, height: 230)
-                                .padding(20)
+                                .frame(width: 240, height: 280)
+                                .padding(10)
                         }
                     }
                 }

@@ -6,6 +6,7 @@
 //
 import Foundation
 import Combine
+import SwiftUI
 
 @MainActor
 class viewModel: ObservableObject {
@@ -21,6 +22,8 @@ class viewModel: ObservableObject {
       }
     
     func deleteTimerbyButton(id: UUID) {
-        timers.removeAll{$0.id == id}
+        withAnimation {
+            timers.removeAll{$0.id == id}
+        }
     }
 }

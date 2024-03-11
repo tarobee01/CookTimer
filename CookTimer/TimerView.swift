@@ -24,18 +24,41 @@ struct TimerView: View {
                 TextField("timerName", text: $timerChildVm.timer.timerName)
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.black)
+                Spacer()
                 Picker("", selection: $selectedColorScheme) {
                     ForEach(TimerView.colorSchemes) { colorScheme in
                         Text(colorScheme.name).tag(colorScheme)
                     }
                 }
-                
+                .pickerStyle(.menu)
             }
-            Text("\(timerChildVm.timer.lefting)")
-                .font(.largeTitle)
-                .fontWeight(.light)
-                .foregroundColor(.black)
-            Slider(value: $timerChildVm.timer.minutes, in: 0...1000, step: 15)
+            HStack {
+                Button(action: {
+                    timerChildVm.timer.minutes += 10
+                }) {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 25))
+                        .opacity(0.8)
+                }
+                .buttonStyle(.plain)
+                .disabled(timerChildVm.timer.isActive == true)
+                Text("\(timerChildVm.timer.lefting)")
+                    .font(.largeTitle)
+                    .fontWeight(.light)
+                    .foregroundColor(.black)
+                Button(action: {
+                    if timerChildVm.timer.minutes >= 10 {
+                        timerChildVm.timer.minutes -= 10
+                    }
+                }) {
+                    Image(systemName: "minus.circle.fill")
+                        .font(.system(size: 25))
+                        .opacity(0.8)
+                }
+                .buttonStyle(.plain)
+                .disabled(timerChildVm.timer.isActive == true)
+            }
+            Slider(value: $timerChildVm.timer.minutes, in: 0...2000, step: 15)
                 .onChange(of: timerChildVm.timer.minutes) { newValue in
                     timerChildVm.setTimer(newValue: newValue)
                 }
@@ -70,8 +93,21 @@ struct TimerView: View {
                 }
                 .disabled(!timerChildVm.timer.isActive)
                 .buttonStyle(.plain)
+                
             }
             .padding()
+            HStack {
+                Spacer()
+                Button(action: {
+                    timerVm.deleteTimerbyButton(id: timerChildVm.id)
+                }, label: {
+                    Image(systemName: "minus.circle.fill")
+                                        .foregroundColor(.red)
+                                        .opacity(0.8)
+                })
+                .buttonStyle(.plain)
+            }
+            
         }
         .padding()
         .background(selectedColorScheme.backgroundColor)
