@@ -36,8 +36,8 @@ struct TimerView: View {
                 Button(action: {
                     timerChildVm.timer.minutes += 10
                 }) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 25))
+                    Image(systemName: "plus")
+                        .font(.system(size: 20))
                         .opacity(0.8)
                 }
                 .buttonStyle(.plain)
@@ -46,13 +46,14 @@ struct TimerView: View {
                     .font(.largeTitle)
                     .fontWeight(.light)
                     .foregroundColor(.black)
+                    .padding(3)
                 Button(action: {
                     if timerChildVm.timer.minutes >= 10 {
                         timerChildVm.timer.minutes -= 10
                     }
                 }) {
-                    Image(systemName: "minus.circle.fill")
-                        .font(.system(size: 25))
+                    Image(systemName: "minus")
+                        .font(.system(size: 20))
                         .opacity(0.8)
                 }
                 .buttonStyle(.plain)
